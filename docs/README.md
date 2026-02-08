@@ -19,6 +19,18 @@
 3. Generate a submission file:
    - python scripts/make_submission.py
 
+## Example Commands
+Run from the project root (relative paths only):
+```bash
+python -m src.models.feature_factory \
+  --input data/raw/your_filename.csv \
+  --output data/processed/train.csv
+
+python scripts/train_pipeline.py \
+  --data data/processed/train.csv \
+  --model two_stage
+```
+
 ## Configuration
 - configs/base.yaml: Unified feature, model, and CV settings
 

@@ -1,0 +1,32 @@
+project:
+  root: "."
+  data_raw: "data/raw"
+  submissions: "submissions"
+
+features:
+  base:
+    - Pclass
+    - Sex
+    - Age
+    - SibSp
+    - Parch
+    - Fare
+    - Embarked
+  engineered:
+    - Title
+    - FamilySize
+    - IsAlone
+    - Deck
+
+model:
+  type: "logistic_regression"
+  params:
+    max_iter: 1000
+
+cv:
+  n_splits: 5
+  shuffle: true
+  random_state: 42
+
+submission:
+  filename: "submission_lr.csv"
